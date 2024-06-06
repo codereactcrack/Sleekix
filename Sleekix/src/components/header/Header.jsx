@@ -19,7 +19,7 @@ const Header = () => {
         <ul className="navbar-menu">
           {navbar.map((item) => (
             <li key={item.name} className="navbar-item">
-              <NavLink to={item.path} className="navbar-link" activeClassName="active-link">
+              <NavLink to={item.path} className="navbar-link">
                 {item.name}
               </NavLink>
             </li>
