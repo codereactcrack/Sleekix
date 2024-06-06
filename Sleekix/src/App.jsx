@@ -7,7 +7,7 @@ import Products from './pages/products/Products'
 import Support from './pages/support/Support'
 import Login from './pages/login/Login'
 import ProductDetails, { getProductDeatils } from './pages/products/ProductDetails'
-import FilteredList from './pages/products/FilteredList'
+import FilteredList, { getFilterList } from './pages/products/FilteredList'
 
 function App() {
 
@@ -20,7 +20,7 @@ function App() {
         <Route path='/products'>
           <Route index element ={<Products/>} />
           <Route path=':id' element ={<ProductDetails/>} loader={getProductDeatils}/>
-          <Route path=':fiterType/:filterName' element={<FilteredList />}/>
+          <Route path=':fiterType/:filterName' element={<FilteredList />} loader={getFilterList}/>
         </Route>
         <Route path='/support' element ={<Support/>} />
         <Route path='/login' element ={<Login/>} />

@@ -7,6 +7,13 @@ const Products = () => {
   const [productList,setProductList] = useState([]);
   const naviagte = useNavigate();
 
+  const categoryList = [
+    {name: 'Beauty',value: 'beauty'},
+    {name: 'Fragrances',value: 'fragrances'},
+    {name: 'Furniture',value: 'furniture'},
+    {name: 'Groceries',value: 'groceries'}
+]
+
   useEffect(() => {
     getProduct()
   }, []) 
@@ -19,10 +26,16 @@ const Products = () => {
   
   return (
     <div>
-
-      <div className='category-conatiner'>
+      <div className='category-container'>
         <div className='category'>
           Sort By Category:-
+        </div>
+        <div className="category-list">
+          <ul>{categoryList.map((item)=>{
+            return(
+              <div key={item.name} onClick={()=>naviagte(`/products/category/${item.value}`)}>{item.name}</div>
+            )
+          })}</ul>
         </div>
       </div>
 

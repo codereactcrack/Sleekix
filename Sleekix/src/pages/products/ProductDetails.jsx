@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 
 const ProductDetails = () => {
-    const {id} = useParams(); 
     const  product = useLoaderData();
 
   return (
