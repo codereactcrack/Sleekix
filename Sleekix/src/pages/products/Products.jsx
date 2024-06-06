@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import './Products.css'
-import { useNavigate } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 
 const Products = () => {
 
-  const [productList,setProductList] = useState([]);
+  const productList= useLoaderData();
   const naviagte = useNavigate();
 
   const categoryList = [
@@ -14,16 +14,6 @@ const Products = () => {
     {name: 'Groceries',value: 'groceries'}
 ]
 
-  useEffect(() => {
-    getProduct()
-  }, []) 
-
-  async function getProduct(){
-    const data = await fetch('https://dummyjson.com/products');
-    const result = await data.json();
-    setProductList(result.products);
-  }
-  
   return (
     <div>
       <div className='category-container'>
@@ -59,3 +49,10 @@ const Products = () => {
 }
 
 export default Products
+
+
+export const getProduct =   async () => {
+  const data = await fetch('https://dummyjson.com/products');
+  const result = await data.json();
+  return (result.products);
+}
