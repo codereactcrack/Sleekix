@@ -1,0 +1,88 @@
+/* Header.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.navbar-logo a {
+  font-size: 1.5em;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-logo a:hover {
+  color: #ddd;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  margin: 0 15px;
+}
+
+.navbar-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s;
+}
+
+.navbar-link:hover {
+  color: #ddd;
+}
+
+.active-link {
+  border-bottom: 2px solid #fff;
+}
+
+.navbar-auth a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-auth a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-item {
+    margin: 10px 0;
+  }
+
+  .navbar-auth {
+    margin-top: 10px;
+  }
+}
