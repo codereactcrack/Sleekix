@@ -1,5 +1,6 @@
 import React from 'react'
 import { useLoaderData, useNavigate } from 'react-router-dom'
+import './FilteredList.css'
 
 const FilteredList = () => {
   const naviagte = useNavigate();

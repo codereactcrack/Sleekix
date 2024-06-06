@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import { useEffect } from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import React from 'react'
+import { useLoaderData } from 'react-router-dom';
+import './ProductDetails.css'
 
 const ProductDetails = () => {
     const  product = useLoaderData();
